@@ -102,7 +102,7 @@ class FeedbackForm extends React.Component {
             <select name="impact" value={this.state.impact} onChange={this.handleChange}>
               <option value="improve">Something we need to improve</option>
               <option value="more">Something we are doing well and should do more of</option>
-              <option value="difficult">Something that can or does put us in a diffifult spot</option>
+              <option value="difficult">Something that can/does put us in a difficult spot</option>
               <option value="takeon">Something that we should consider taking on</option>
             </select>
           </label><br></br>
