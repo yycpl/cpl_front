@@ -4,14 +4,17 @@ class FeedbackForm extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
-          fname: '',
-          lname: '',
-          emplID: '',
-          branch:'',
-          category:'',
-          priority:'',
-          comments:'',
-          dateStamp:''
+        dd1: "default1",
+        dd2: "default2",  
+        fname: '',
+        lname: '',
+        emplID: '',
+        branch:'',
+        category:'',
+        impact:'',
+        priority:'',
+        comments:'',
+        dateStamp:''
       };
   
       this.handleChange = this.handleChange.bind(this);
@@ -95,12 +98,22 @@ class FeedbackForm extends React.Component {
           </label><br></br>
 
           <label>
+            What is the impact?
+            <select name="impact" value={this.state.impact} onChange={this.handleChange}>
+              <option value="improve">Something we need to improve</option>
+              <option value="more">Something we are doing well and should do more of</option>
+              <option value="difficult">Something that can or does put us in a diffifult spot</option>
+              <option value="takeon">Something that we should consider taking on</option>
+            </select>
+          </label><br></br>
+
+          <label>
             Priority:
-            <select name="priority" value={this.state.priorityy} onChange={this.handleChange}>
-              <option value="low">Low</option>
-              <option value="medium">Medium</option>
-              <option value="high">High</option>
-              <option value="critical">Critical</option>
+            <select name="priority" value={this.state.priority} onChange={this.handleChange}>
+              <option value="not_not">Not urgent and not very important</option>
+              <option value="urgent_not">Urgent to someone but not that important</option>
+              <option value="not_important">Not urgent but very important</option>
+              <option value="urgent_important">Urgent and important</option>
             </select>
           </label><br></br>
 
