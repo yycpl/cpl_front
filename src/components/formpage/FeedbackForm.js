@@ -110,9 +110,9 @@ class FeedbackForm extends React.Component {
           <label>
             Priority:
             <select name="priority" value={this.state.priority} onChange={this.handleChange}>
-              <option value="not_not">Not urgent and not very important</option>
-              <option value="urgent_not">Urgent to someone but not that important</option>
-              <option value="not_important">Not urgent but very important</option>
+              <option value="not">Not urgent and not very important</option>
+              <option value="urgent">Urgent to someone but not that important</option>
+              <option value="important">Not urgent but very important</option>
               <option value="urgent_important">Urgent and important</option>
             </select>
           </label><br></br>
