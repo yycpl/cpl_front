@@ -1,6 +1,7 @@
 import React from 'react';
 import BranchDropdown from './selects/BranchDropdown';
 import Category1 from './selects/Category1';
+import Category2 from './selects/Category2';
 import Priority from './selects/Priority'
 
 class FeedbackForm extends React.Component {
@@ -31,6 +32,10 @@ class FeedbackForm extends React.Component {
       this.setState({
         [name]: value
       });
+
+      if ( target.name === 'category1' && this.state.category2 !== "") {
+        this.setState({category2: ""})
+      }
     }
 
     handleSubmit(event) {
@@ -45,8 +50,11 @@ class FeedbackForm extends React.Component {
     render() {
       let branch = this.state.branch;
       let category1 = this.state.category1;
+      let category2 = this.state.category2;
       let priority = this.state.priority;
 
+      console.log(category1)
+      console.log(category2)
       return (
         <form onSubmit={this.handleSubmit}>
           <label>
@@ -71,9 +79,17 @@ class FeedbackForm extends React.Component {
           />
 
           <Category1
-            branch = { category1 }
+            category1 = { category1 }
             handleChange = { this.handleChange }
           />
+
+          {category1 === "" ? "" :
+            <Category2
+              category1 = { category1 }
+              category2 = { category2 }
+              handleChange = { this.handleChange }
+            />
+          }
 
           <Priority
             branch = { priority }

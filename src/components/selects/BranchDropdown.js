@@ -26,7 +26,7 @@ const BranchDropdown = ( props ) => {
           <option value="signalHill">Signal Hill</option>
           <option value="southwood">Southwood</option>
           <option value="villageSquare">Village Square</option>
-          <option value="operationCenter">Operation Center</option>
+          <option value="operationCenter">OS/Warehouse</option>
         </select>
       </label>
     </div>
