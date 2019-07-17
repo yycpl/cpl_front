@@ -2,7 +2,8 @@ import React from 'react';
 import BranchDropdown from './selects/BranchDropdown';
 import Category1 from './selects/Category1';
 import Category2 from './selects/Category2';
-import Priority from './selects/Priority'
+import Impact from './selects/Impact';
+import Priority from './selects/Priority';
 
 class FeedbackForm extends React.Component {
     constructor(props) {
@@ -15,7 +16,8 @@ class FeedbackForm extends React.Component {
           category1: '',
           category2: '',
           category3: '',
-          priority: '',
+          impact: 'improve',
+          priority: 'not',
           comments: '',
           dateStamp: ''
       };
@@ -51,10 +53,15 @@ class FeedbackForm extends React.Component {
       let branch = this.state.branch;
       let category1 = this.state.category1;
       let category2 = this.state.category2;
+      let impact = this.state.impact;
       let priority = this.state.priority;
 
+      console.log(branch)
       console.log(category1)
       console.log(category2)
+      console.log(impact)
+      console.log(priority)
+
       return (
         <form onSubmit={this.handleSubmit}>
           <label>
@@ -91,8 +98,13 @@ class FeedbackForm extends React.Component {
             />
           }
 
+          <Impact
+            impact = { impact }
+            handleChange = { this.handleChange }
+          />
+
           <Priority
-            branch = { priority }
+            priority = { priority }
             handleChange = { this.handleChange }
           />
 
