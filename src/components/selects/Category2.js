@@ -26,7 +26,7 @@ const Category2 = ( props ) => {
             ""
           }
 
-          { props.category1 === 'services' ? <option value="teens">Families</option> : "" }
+          { props.category1 === 'services' ? <option value="families">Families</option> : "" }
 
           { props.category1 === 'programs' ? <option value="programs 2">Programs 2</option> : "" }
 
