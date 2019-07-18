@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import FormApp from "./components/formpage/FormApp";
+import FormApp from "./components/FormApp";
 
 function App() {
   return (
